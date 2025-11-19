@@ -1,4 +1,4 @@
-package juego;
+package juegos de ;
 public abstract class Juego {
     protected int numeroDeVidas;
     protected int record;
