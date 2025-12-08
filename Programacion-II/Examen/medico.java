@@ -1,20 +1,41 @@
 package abcdearchivos;
+import java.io.Serializable;
 
-public class Medico {
-    private int idMed, aniosExperiencia;
-    private String nombreMed, ApellidoMed;
+class Medico implements Serializable {
+    private int idMed;
+    private String nombreMed;
+    private String apellidoMed;
+    private int aniosExperiencia;
 
-    public Medico(int idMed, int aniosExperiencia, String nombreMed, String ApellidoMed) {
+    public Medico(int idMed, String nombreMed, String apellidoMed, int aniosExperiencia) {
         this.idMed = idMed;
-        this.aniosExperiencia = aniosExperiencia;
         this.nombreMed = nombreMed;
-        this.ApellidoMed = ApellidoMed;
+        this.apellidoMed = apellidoMed;
+        this.aniosExperiencia = aniosExperiencia;
     }
 
-    public Medico() {}
+    public int getIdMed() { 
+        return idMed; 
+    }
+    
+    public String getNombreMed() { 
+        return nombreMed; 
+    }
+    
+    public String getApellidoMed() { 
+        return apellidoMed; 
+    }
+    
+    public int getAniosExperiencia() { 
+        return aniosExperiencia; 
+    }
 
-    public int getIdMed(){ return idMed; }
-    public String getNombreMed(){ return nombreMed; }
-    public String getApellidoMed(){ return ApellidoMed; }
+    public void setIdMed(int idMed) { 
+        this.idMed = idMed; 
+    }
+    
+    @Override
+    public String toString() {
+        return "ID: " + idMed + ", Nombre: " + nombreMed + " " + apellidoMed + ", Experiencia: " + aniosExperiencia + " años";
+    }
 }
-
